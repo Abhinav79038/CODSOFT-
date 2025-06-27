@@ -1,4 +1,3 @@
-# This is a simple chatbot that replies based on basic questions
 
 def chatbot():
     print("🤖 CodBot: Hello! I'm CodBot, your assistant.")
@@ -19,7 +18,7 @@ def chatbot():
         "bye": "Goodbye! Take care! 👋"
     }
 
-    # Extra phrases that mean the same thing
+    
     alternate_phrases = {
         "how are you doing": "how are you",
         "what's your name": "what is your name",
@@ -51,6 +50,6 @@ def chatbot():
         else:
             print("🤖 CodBot: Hmm... I don't know how to respond to that yet.")
 
-# Start the chatbot
+
 if __name__ == "__main__":
     chatbot()
