@@ -3,8 +3,7 @@ def chatbot():
     print("🤖 CodBot: Hello! I'm CodBot, your assistant.")
     print("📝 Type anything to talk. Type 'bye' to end the chat.\n")
 
-    # Responses for specific questions
-    responses = {
+responses = {
         "hi": "Hello there!",
         "hello": "Hi! How can I help you?",
         "hey": "Hey! How’s it going?",
@@ -30,19 +29,18 @@ def chatbot():
     }
 
     while True:
-        # Ask the user to type something
+        
         user_input = input("You: ").lower().strip()
 
-        # Convert alternate phrases to known ones
+        
         if user_input in alternate_phrases:
             user_input = alternate_phrases[user_input]
 
-        # If user wants to exit
         if user_input == "bye":
             print("🤖 CodBot:", responses["bye"])
             break
 
-        # If the input matches a known response
+        
         elif user_input in responses:
             print("🤖 CodBot:", responses[user_input])
 
