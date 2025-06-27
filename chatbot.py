@@ -30,7 +30,6 @@ def chatbot():
         "thanks a lot": "thanks"
     }
 
-    # Chat loop
     while True:
         user = input("You: ").lower().strip()
 
@@ -38,12 +37,12 @@ def chatbot():
         if user in similar_questions:
             user = similar_questions[user]
 
-        # If the user says bye, end the chat
+       
         if user == "bye":
             print("🤖 CodBot:", replies["bye"])
             break
 
-        # If we know the reply, show it
+        
         elif user in replies:
             print("🤖 CodBot:", replies[user])
 
