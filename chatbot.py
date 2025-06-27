@@ -1,10 +1,10 @@
-# A very simple chatbot that replies based on what you type
+
 
 def chatbot():
     print("🤖 CodBot: Hello! I'm CodBot, your friendly chatbot.")
     print("💬 You can talk to me. Type 'bye' to end the chat.\n")
 
-    # Known questions and their replies
+    
     replies = {
         "hi": "Hi there!",
         "hello": "Hello! How can I help you?",
@@ -19,7 +19,7 @@ def chatbot():
         "bye": "Goodbye! Talk to you later. 👋"
     }
 
-    # Similar questions that map to the main ones
+   
     similar_questions = {
         "what's your name": "what is your name",
         "how are you doing": "how are you",
@@ -34,7 +34,7 @@ def chatbot():
     while True:
         user = input("You: ").lower().strip()
 
-        # Convert similar phrases to main ones
+
         if user in similar_questions:
             user = similar_questions[user]
 
@@ -47,10 +47,9 @@ def chatbot():
         elif user in replies:
             print("🤖 CodBot:", replies[user])
 
-        # If we don't understand
+       
         else:
             print("🤖 CodBot: Hmm... I don’t understand that. Try asking something else.")
 
-# Start the chatbot
 if __name__ == "__main__":
     chatbot()
